@@ -1,0 +1,361 @@
+body {
+    background-color: #ffffff;
+}
+
+
+#head #logo1 {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+
+#openModal {
+    position: relative;
+}
+
+#head #logo2 {
+    position: absolute;
+    top: -45px;
+    right: 120px;
+}
+
+
+#head .box {
+    position: absolute;
+    background-color: #ff7a00;
+    width: 120px;
+    height: 58px;
+    right: 60px;
+    top: -50px;
+    border-radius: 25px;
+}
+
+#head .text {
+    position: absolute;
+    display: inline-flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    top: -55px;
+    left: 1390px;
+    font-size: 40px;
+}
+
+#head #aTag {
+    position: absolute;
+    left: 650px;
+    top: 50px;
+}
+
+#head #aTag a {
+    text-decoration: none;
+    color: black;
+    left: 350px;
+    top: 15px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.textAndImage {
+    display: inline;
+}
+
+.mainText {
+    position: relative;
+    color: #ff7a00;
+    width: 350px;
+    padding: 148px 120px 0 171px;
+    font-size: 80px;
+    font-weight: bold;
+    height: 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mainShop {
+    position: absolute;
+    left: 850px;
+    top: 100px;
+    font-size: 30px;
+    height: 450px;
+}
+
+
+#shopNow a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: #ff7a00;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    width: 400px;
+    height: 55px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.button h1 {
+    position: relative;
+    color: black;
+    text-align: center;
+    left: 130px;
+    color: white;
+    text-decoration: none;
+}
+
+.about {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 40px;
+    margin: auto;
+    top: 20px;
+}
+
+.about h3 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.gadgetsIntro {
+    position: relative;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.productImage::after {
+   content: "";
+   clear: both;
+   display: flex;
+   margin-left: 10px;
+}
+
+.product {
+    float: left;
+    width: 25%;
+    padding: 45px;
+}
+
+.product img {
+    padding-right: auto;
+    padding-left: 80px;
+    width: 350px;
+}
+
+.product h1 {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    left: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product button {
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff7a00;
+    width: 250px;
+    left: 130px;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* .product button:focus {
+    background-color: rgb(255, 205, 158);
+} */
+
+.container {
+    position: relative;
+    width: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.image {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+}
+
+.text {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    white-space: nowrap;
+}
+
+.text p{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.text h1 {
+    position: absolute;
+    top: 220px;
+    left: -42px;
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    width: 350px;
+    right: 100px;
+    height: 457px;
+    left: 80px;
+    background-color: rgba(0, 0, 0, 0.6 );
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 5px;
+}
+
+.container:hover .image {
+    opacity: 1;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+
+.footer {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 40px;
+    margin: auto;
+    top: 20px;
+}
+
+.footer h3 {
+    position: absolute;
+    left: 900px;
+    bottom: 50px;
+    margin: auto;
+    font-weight: normal;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.td {
+    width: 130px;
+    text-align: left;
+    padding: 5px;
+    border: 2px;
+    font-weight: bold;
+}
+
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6 );
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    text-align: center;
+}
+
+input {
+    width: 70%;
+    height: 30px;
+    display: inline-block;
+    margin: 0px auto;
+    background-color: #ffe9d6;
+}
+
+.close {
+    position: absolute;
+    bottom: 4px;
+    right: 240px;
+    font-size: 20px;
+}
+
+.close Button {
+    height: 50px;
+    width: 230px;
+    border-radius: 5px;
+    border: 1px;
+    background-color: #ffe9d6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.amount {
+    position: absolute;
+    font-size: 20px;
+    left: 200px;
+    bottom: 20px;
+}
+
+.amount h1 {
+    font-size: 40px;
+     bottom: 30px;
+}
+
+
+.payment {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    font-size: 20px;
+    text-transform: none;
+}
+
+.payment Button {
+    height: 50px;
+    width: 230px;
+    border-radius: 5px;
+    border: 1px;
+    background-color: #ff7a00;
+}
+
+.payment h1 {
+    color: white;
+    text-align: center;
+}
