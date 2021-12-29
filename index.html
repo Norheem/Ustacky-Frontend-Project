@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section id="intro-section">
+
+
+        <div id="head">
+            <img id="logo1" src="./image/EMS.svg" alt="emsIcon">
+
+            <div id="aTag">
+                <a href="#intro-section">Intro</a>
+                <a href="#about-section">About</a>
+                <a href="#shop-setion">Shop</a>
+            </div>
+
+            <div id="openModal">
+                <div class="box"></div>
+                <h1 class="text" id="addItems">0</h1>
+                <img id="logo2" src="./image/cart.svg" alt="cartIcon">
+            </div>
+
+            <div class="textAndImage">
+                <h1 class="mainText">THE E-MILLENIAL STORE</h1>
+            
+                <img class="mainShop" src="./image/heroImage.png" alt="shopImage">
+            
+            </div>
+            <div id="shopNow">
+                <a href="#shop-setion">
+                    <button class="button">
+                        <h1>SHOP NOW</h1>
+                    </button>
+                </a> 
+            </div>   
+            
+       
+    </section>
+       
+
+
+    <section id="about-section">
+        <div class="about">
+            <h3>E-Millenial Store is an hypothetical online store for gadgets, we believe every <br>
+                'Millenial' or 'Gen-Z' should have today. We've got mobile phones, laptops, <br> smartwatches
+                and other gadgets. Explore all our gadgets and choose the <br> ones that suit you.   
+            </h3>
+        </div>
+
+    </section>
+
+    <section id="shop-setion">
+        <h1 class="gadgetsIntro">OUR GADGETS</h1>
+
+        <div class="productImage">
+
+            <div class="product">
+                <div class="container">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Price</p>
+                            <h1 id="price">₦500,000</h1>
+                        </div>
+                    </div>
+                    <img class="image" src="./image/product1.png" alt="product1">
+                </div>
+                <h1 id="item">SAMSUNG TV</h1>
+                <button class="addToCart" id="addItem1" onclick="addItem1()">ADD TO CART</button>
+            </div>
+            
+            <div class="product" id="product2">
+                <div class="container">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Price</p>
+                            <h1 id="price">₦250,000</h1>
+                        </div>
+                    </div>
+                    <img class="image" src="./image/product2.png" alt="product2">
+                </div>
+                <h1 id="item">PIXEL 4a</h1>
+                <button class="addToCart" id="addItem2" onclick="addItem2()">ADD TO CART</button>
+            </div>
+           
+            <div class="product" id="product3">
+                <div class="container">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Price</p>
+                            <h1 id="price">₦300,000</h1>
+                        </div>
+                    </div>
+                    <img class="image" src="./image/product3.png" alt="product3">
+                </div>
+                <h1 id="item">PS 5</h1>
+                <button class="addToCart" id="addItem3" onclick="addItem3()">ADD TO CART</button>
+            </div>
+
+            <div class="product" id="product4">
+                <div class="container">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Price</p>
+                            <h1 id="price">₦800,000</h1>
+                        </div>
+                    </div>
+                    <img class="image" src="./image/product4.png" alt="product4">
+                </div>
+                <h1 id="item">MACBOOK AIR</h1>
+                <button class="addToCart" id="addItem4" onclick="addItem4()">ADD TO CART</button>
+            </div>
+
+            <div class="product" id="product5">
+                <div class="container">
+                    <div class="overlay">
+                        <div class="text">
+                            <P>Price</P>
+                            <h1 id="price">₦95,000</h1>
+                        </div>
+                    </div>
+                    <img class="image" src="./image/product5.png" alt="product5">
+                </div>
+                <h1 id="item">APPLE WATCH</h1>
+                <button class="addToCart" id="addItem5" onclick="addItem5()">ADD TO CART</button>
+            </div>
+
+            <div class="product" id="product6">
+                <div class="container">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Price</p>
+                            <h1 id="price">₦30,000</h1>
+                        </div>
+                    </div>
+                    <img class="image" src="./image/product6.png" alt="product6">
+                </div>
+                <h1 id="item">AIR PODS</h1>
+                <button class="addToCart" id="addItem" onclick="addItem6()">ADD TO CART</button>
+            </div>
+             
+           
+        </div>
+    </section>
+        
+    <section id="footer-section">
+
+        <div class="footer">
+            <img src="./image/EMS.svg" alt="EMSFooter">
+            <h3>Designed and Crafted by Nohim Sulaiman</h3>
+        </div>
+
+    </section>
+
+    <section id="modalPage">
+
+        <div class="bg-modal">
+
+            <div class="modal-content">
+
+                <table class="table">
+                    <tr>
+                        <td class="td">S/N</td>
+                        <td class="td">Item</td>
+                        <td class="td">Price</td>
+                        <td class="td">Quantity</td>
+                    </tr>
+                </table>
+                <form action="">
+                    <label for=""></label>
+                    <input type="text" id="nameInput" placeholder="Your Name" onblur="nameValidation()"><br>
+                    <p class="errors" id="nameError"></p>
+                    <br>
+                    <label for=""></label>
+                    <input type="email" id="emailInput" placeholder="Your Email" onblur="emailValidation()"/><br>
+                    <p class="errors" id="emailError"></p>
+                    <br>
+                    <label for=""></label>
+                    <input type="tel" id="numberInput" placeholder="Your Phone Number" onblur="numberValidation()"><br>
+                    <p class="errors" id="numberError"></p>
+                    <br>
+                </form>
+        
+                <div class="amount">
+                    <h2>Total Amount to be Paid</h2>
+                    <h1>₦0</h1>
+                </div>    
+\
+
+                    <div class="close">
+                        <button>
+                            <h1>Continue Shopping</h1>
+                        </button>
+                    </div>
+
+                    
+                    <div class="payment">
+                        <button>
+                            <h1>Checkout</h1>
+                        </button>
+                    </div>
+
+                    
+        
+            </div>
+
+        </div>
+        
+    
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
