@@ -149,7 +149,7 @@ function decreaseItemQty(i){
 
 
 function nameValidation() {
-    var nameInput = document.getElementById('nameInput');
+    var nameInput = document.getElementById('customerName');
     var nameError = document.getElementById('nameError');
 
     if (nameInput.value == "") {
@@ -165,7 +165,7 @@ function nameValidation() {
 }
 
 function emailValidation() {
-    var emailInput = document.getElementById('emailInput');
+    var emailInput = document.getElementById('customerEmail');
     var emailError = document.getElementById('emailError');
 
     if(emailInput.value == "") {
@@ -194,7 +194,7 @@ function emailValidation() {
 }
 
 function numberValidation() {
-    var phone = document.getElementById('numberInput').value;
+    var phone = document.getElementById('customerTel').value;
 
     if (isNaN(phone) || phone.length != 11) {
         numberInput.style.borderColor = 'red';
@@ -246,19 +246,6 @@ function numberValidation() {
     // }
 }
 
-let summaryModal = document.getElementById('summaryModal')
-// let homePage = document.getElementById('intro-section')
-
-//open summary modal
-function displaySummaryModal(){
-    summaryModal.style.display = "flex"
-}
-//close summary modal
-function closeSummaryModal(){
-    summaryModal.style.display ="none"
-
-}
-
 
 
 function showSummary() {
@@ -280,6 +267,7 @@ function showSummary() {
       customerNameDiv.innerHTML = customerSummaryName;
 
 }
+
 
 
 
