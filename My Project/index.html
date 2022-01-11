@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ustacky Frontend Project</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -20,9 +20,9 @@
                 <a href="#shop-setion">Shop</a>
             </div>
 
-            <div id="openModal">
+            <div id="openModal" onclick="displayModal()">
                 <div class="box"></div>
-                <h1 class="text" id="addItems">0</h1>
+                <h1 class="cart-qty" id="addItems">0</h1>
                 <img id="logo2" src="./image/cart.svg" alt="cartIcon">
             </div>
 
@@ -71,7 +71,8 @@
                     <img class="image" src="./image/product1.png" alt="product1">
                 </div>
                 <h1 id="item">SAMSUNG TV</h1>
-                <button class="addToCart" id="addItem1" onclick="addItem1()">ADD TO CART</button>
+                <!-- onclick="addItem1(), count()"-->
+                <button class="addToCart one" id="addItem1" onClick="addToCart(0, one)">ADD TO CART</button>
             </div>
             
             <div class="product" id="product2">
@@ -85,7 +86,8 @@
                     <img class="image" src="./image/product2.png" alt="product2">
                 </div>
                 <h1 id="item">PIXEL 4a</h1>
-                <button class="addToCart" id="addItem2" onclick="addItem2()">ADD TO CART</button>
+                <!--   onclick="addItem2(), count()" -->
+                <button class="addToCart two" id="addItem2" onClick="addToCart(1, two)">ADD TO CART</button>
             </div>
            
             <div class="product" id="product3">
@@ -99,7 +101,8 @@
                     <img class="image" src="./image/product3.png" alt="product3">
                 </div>
                 <h1 id="item">PS 5</h1>
-                <button class="addToCart" id="addItem3" onclick="addItem3()">ADD TO CART</button>
+                <!--  onclick="addItem3(), count()"-->
+                <button class="addToCart three" id="addItem3" onClick="addToCart(2, three)">ADD TO CART</button>
             </div>
 
             <div class="product" id="product4">
@@ -113,7 +116,8 @@
                     <img class="image" src="./image/product4.png" alt="product4">
                 </div>
                 <h1 id="item">MACBOOK AIR</h1>
-                <button class="addToCart" id="addItem4" onclick="addItem4()">ADD TO CART</button>
+                <!--  onclick="addItem4(), count()"-->
+                <button class="addToCart four" id="addItem4" onClick="addToCart(3, four)" >ADD TO CART</button>
             </div>
 
             <div class="product" id="product5">
@@ -127,7 +131,8 @@
                     <img class="image" src="./image/product5.png" alt="product5">
                 </div>
                 <h1 id="item">APPLE WATCH</h1>
-                <button class="addToCart" id="addItem5" onclick="addItem5()">ADD TO CART</button>
+                <!--  onclick="addItem5(), count()"-->
+                <button class="addToCart five" id="addItem5" onClick="addToCart(4, five)">ADD TO CART</button>
             </div>
 
             <div class="product" id="product6">
@@ -141,7 +146,8 @@
                     <img class="image" src="./image/product6.png" alt="product6">
                 </div>
                 <h1 id="item">AIR PODS</h1>
-                <button class="addToCart" id="addItem" onclick="addItem6()">ADD TO CART</button>
+                <!-- onclick="addItem6(),count()"-->
+                <button class="addToCart six" id="addItem6" onClick="addToCart(5, six)">ADD TO CART</button>
             </div>
              
            
@@ -164,46 +170,59 @@
             <div class="modal-content">
 
                 <table class="table">
-                    <tr>
-                        <td class="td">S/N</td>
-                        <td class="td">Item</td>
-                        <td class="td">Price</td>
-                        <td class="td">Quantity</td>
-                    </tr>
+                    <thead>
+                        <tr class="tr">
+                            <th class="td">S/N</th>
+                            <th class="td">Item</th>
+                            <th class="td">Price</th>
+                            <th class="td">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td class="serialNumber">1</td>
+                            <td class="items">Shoe</td>
+                            <td class="itemPrice">400</td>
+                            <td class="itemQuantity">
+                                <button onclick="decrement()">-</button>
+                                <span id="numOfItem" class="itemsNum">0</span>
+                                <button onclick="increment()">+</button>
+                            </td>
+                            <td><button class="remove">Remove</button></td>
+                        </tr> -->
+                    </tbody>
                 </table>
-                <form action="">
+                <form action="" id="paymentForm">
                     <label for=""></label>
-                    <input type="text" id="nameInput" placeholder="Your Name" onblur="nameValidation()"><br>
+                    <input type="text" id="nameInput" placeholder="Your Name" onblur="nameValidation()" required><br>
                     <p class="errors" id="nameError"></p>
                     <br>
                     <label for=""></label>
-                    <input type="email" id="emailInput" placeholder="Your Email" onblur="emailValidation()"/><br>
+                    <input type="email" id="emailInput" placeholder="Your Email" onblur="emailValidation()" required><br>
                     <p class="errors" id="emailError"></p>
                     <br>
                     <label for=""></label>
-                    <input type="tel" id="numberInput" placeholder="Your Phone Number" onblur="numberValidation()"><br>
-                    <p class="errors" id="numberError"></p>
+                    <input type="tel" id="numberInput" placeholder="Your Phone Number"  onblur="numberValidation()" required><br>
+                    <p class="errors" id="numberError" size="11"></p>
                     <br>
                 </form>
+                
         
                 <div class="amount">
                     <h2>Total Amount to be Paid</h2>
-                    <h1>₦0</h1>
+                    <h1>₦<span id="amount">0</span></h1>
                 </div>    
-\
 
-                    <div class="close">
-                        <button>
-                            <h1>Continue Shopping</h1>
-                        </button>
+                <div class="call-to-action">
+                    <div>
+                        <button type="submit" onclick="closeModal()" class="close">Continue Shopping</button>
                     </div>
 
-                    
-                    <div class="payment">
-                        <button>
-                            <h1>Checkout</h1>
-                        </button>
+                    <!--  checkout() onclick="payWithPaystack()" onclick="displaySummaryModal()"-->
+                    <div> 
+                        <button onclick="payWithPaystack()" class="payment">Checkout</button>
                     </div>
+                </div>
 
                     
         
@@ -213,6 +232,32 @@
         
     
     </section>
+    
+    <section id="summaryModal">
+        <div class="summaryContent">
+            <div class="customerName">
+                <!-- <h3>Thank You, <strong style="color: #ff7a00; font-size: 20px;">Sulaiman Nohim Oladimeji </strong>, Your Order Has been Received</h3> -->
+            </div>
+            <div class="summaryImg">
+                <img src="image/check.svg" alt="">
+            </div>
+            <div class="summaryTable">
+                <h1>Summary</h1>
+                <table>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="okay">
+                 <button onclick=" closeSummaryModal()"> Ok</button>
+            </div>
+           
+        </div>
+    </section>
+    <script src="https://js.paystack.co/v1/inline.js"></script> 
     <script src="./script.js"></script>
 </body>
 </html>
